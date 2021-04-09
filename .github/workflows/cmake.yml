@@ -42,7 +42,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: package
-        path: cards
+        path: build_res/cards
 
     - name: send custom message with args
       uses: appleboy/telegram-action@master
