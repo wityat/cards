@@ -36,7 +36,7 @@ jobs:
       working-directory: ${{github.workspace}}/build
       shell: bash
       # Execute the build.  You can specify a specific target with "--target <NAME>"
-      run: mkdir build_res && ls && cmake -Bbuild_res -H.
+      run: ls && cd .. && ls && mkdir build_res && cmake -Bbuild_res -H.
 
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
