@@ -50,4 +50,4 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: The ${{ github.event_name }} event triggered first step.
-        document: build_res/package.zip
+        document: build_res/package
