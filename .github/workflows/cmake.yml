@@ -45,6 +45,7 @@ jobs:
         path: build_res
 
     - name: send custom message with args
+      run: ls
       uses: appleboy/telegram-action@master
       with:
         to: ${{ secrets.TELEGRAM_TO }}
