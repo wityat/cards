@@ -36,16 +36,15 @@ jobs:
       working-directory: ${{github.workspace}}/build
       shell: bash
       # Execute the build.  You can specify a specific target with "--target <NAME>"
-      run: ls && cd .. && ls && mkdir build_res && cmake -Bbuild_res -H.
+      run: ls && cd .. && ls && mkdir build_res && cmake -Bbuild_res -H. && cd build_res && make && ls
 
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
       with:
         name: package
-        path: build_res
+        path: cards
 
     - name: send custom message with args
-      run: ls
       uses: appleboy/telegram-action@master
       with:
         to: ${{ secrets.TELEGRAM_TO }}
